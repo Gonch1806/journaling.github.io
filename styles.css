@@ -1,0 +1,98 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #E7D6BD;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.date-display {
+    padding: 1rem;
+    background-color: #E7D6BD;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#current-date {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+}
+
+.journal-entry {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+}
+
+.lined-textarea {
+    width: 95%;
+    height: 90%;
+    padding: 10px;
+    border:none;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.lined-textarea:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, transparent 90%, rgba(0, 0, 0, 0.15) 90%, rgba(0, 0, 0, 0.15) 100%);
+    background-size: 100% 40px;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1rem;
+    resize: none;
+    color: #333;
+    line-height: 40px;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    position: relative;
+    z-index: 2;
+    text-align: justify;
+    overflow-wrap: break-word;
+}
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+textarea::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.google-signin {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #4285F4;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    cursor: pointer;
+}
+
+.google-signin:hover {
+    background-color: #357ae8;
+}
